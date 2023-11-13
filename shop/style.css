@@ -8,6 +8,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -19,6 +23,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
@@ -31,7 +36,8 @@ body {
   margin-right: 41px;
 }
 
-.header__right {
+.menu__list {
+  list-style-type: none;
   display: flex;
   gap: 33px;
 }
@@ -48,12 +54,59 @@ body {
   font-size: 28px;
 }
 
+.menu:hover ~ .mobile-menu {
+  display: block;
+}
+
 .fa-user {
   font-size: 28px;
 }
 
 .fa-cart-shopping {
   font-size: 28px;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 55px;
+  right: 200px;
+  background: #fff;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 32px;
+  display: none;
+}
+
+.mobile-menu__item {
+  margin-bottom: 20px;
+}
+
+.mobile-menu__heading {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.mobile-menu__title {
+  display: block;
+  color: #f16d7f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+
+.mobile-menu__link {
+  color: #6f6e6e;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: block;
+  margin-bottom: 11px;
 }
 
 .main {
@@ -162,6 +215,21 @@ body {
 .product__item {
   max-width: 30%;
   background-color: #f8f8f8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.product__item:hover .product__img {
+  filter: brightness(30%);
+}
+
+.product__item:hover .product__add-link {
+  position: absolute;
+  top: 180px;
+  display: flex;
+  align-self: center;
+  align-items: center;
 }
 
 .product__img {
@@ -199,6 +267,22 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.product__add-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 1rem 2rem;
+  border: #fff 1px solid;
+  display: none;
+}
+
+.product__cart {
+  margin-right: 11px;
 }
 
 .more {
