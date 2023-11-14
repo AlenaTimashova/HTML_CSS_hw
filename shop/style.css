@@ -54,7 +54,7 @@ a {
   font-size: 28px;
 }
 
-.menu:hover ~ .mobile-menu {
+.menu__item:hover .mobile-menu {
   display: block;
 }
 
